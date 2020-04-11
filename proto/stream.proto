@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package proto;
+
+service StreamService {
+    rpc GetFile(Request) returns (Response) {}
+}
+
+message Request {
+    string Filename = 1;
+}
+
+message Response {
+    bytes Content = 1;
+}
